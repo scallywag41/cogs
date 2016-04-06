@@ -1,0 +1,15 @@
+[Unit]
+Description="Fitz Bot Process"
+Documentation=http://www.github.com/scallywag41/
+
+[Service]
+ExecStart=cd /opt/fitz
+ExecStart=/opt/fitz/fitz.bash
+Restart=on-failure
+RestartSec=10
+Type=simple
+PIDFile=/var/tmp/fitz.pid
+
+[Install]
+WantedBy=multi-user.target
+
