@@ -4,7 +4,7 @@ Documentation=http://www.github.com/scallywag41/
 
 [Service]
 ExecStart=cd /opt/milton
-ExecStart=/opt/milton/milton.bash
+ExecStart=/bin/bash -c "/opt/milton/milton.bash > /var/log/bots/milton.log 2>&1"
 Restart=on-failure
 RestartSec=10
 Type=simple

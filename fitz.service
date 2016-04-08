@@ -4,7 +4,7 @@ Documentation=http://www.github.com/scallywag41/
 
 [Service]
 ExecStart=cd /opt/fitz
-ExecStart=/opt/fitz/fitz.bash
+ExecStart=/bin/bash -c "/opt/fitz/fitz.bash > /var/log/bots/fitz.log 2>&1"
 Restart=on-failure
 RestartSec=10
 Type=simple
